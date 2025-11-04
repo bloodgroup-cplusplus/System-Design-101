@@ -130,7 +130,7 @@ Smart people built standards so we don't have to worry about this. Your app work
 
 ---
 
-![image1](https://drive.google.com/file/d/1hDOOb-Cg2OqYG7i7FqLzW4UrZkUnhir3/view?usp=sharing)
+![image1](https://res.cloudinary.com/dmcov966p/image/upload/v1762249276/WhatsApp_Image_2025-11-03_at_15.05.20_d38d0f00_xqjrav.jpg)
 
 **Remember this terminology:**
 
