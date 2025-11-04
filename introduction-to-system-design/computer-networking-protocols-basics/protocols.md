@@ -130,7 +130,7 @@ Smart people built standards so we don't have to worry about this. Your app work
 
 ---
 
-![][image1]
+![image1][https://drive.google.com/file/d/1hDOOb-Cg2OqYG7i7FqLzW4UrZkUnhir3/view?usp=sharing]
 
 **Remember this terminology:**
 
