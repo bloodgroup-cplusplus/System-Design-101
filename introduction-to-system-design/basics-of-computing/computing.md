@@ -7,7 +7,7 @@ premium: false
 ---
 
 
-## **1: How Computers Work \- The Orchestra Analogy**
+# How Computers Work
 
 ### **🎯 Challenge 1: The Mystery Machine**
 
