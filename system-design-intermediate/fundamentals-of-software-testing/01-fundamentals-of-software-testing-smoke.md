@@ -1,3 +1,11 @@
+---
+slug: fundamentals-of-software-testing-smoke-testing
+title: Software Testing Fundamentals && Smoke Testing
+readTime: 10 min
+orderIndex: 1
+premium: false
+---
+
 # **Software Testing:**
 
 #  **The New Car Mystery**
