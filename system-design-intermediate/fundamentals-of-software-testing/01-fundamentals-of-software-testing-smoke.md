@@ -126,26 +126,37 @@ Smoke Test Suite (runs in 2 minutes):
 1\. Can user load homepage?
 
 
-|   GET https://app.com/   Expected: 200 OK ✅ |
-| :---- |
+```bash
+  GET https://app.com/
+
+  Expected: 200 OK ✅
+
+```
 
 2\. Can user log in?
 
+```bash
+  POST /login with valid credentials
 
-|  POST /login with valid credentials   Expected: Redirect to dashboard ✅ |
-| :---- |
+  Expected: Redirect to dashboard ✅
+  ```
 
 3\. Can user see their data?
 
+```bash
+ GET /api/user/profile
 
-| GET /api/user/profile   Expected: Returns user JSON ✅ |
-| :---- |
+ Expected: Returns user JSON ✅
+```
 
 4\. Is database responding?
+```bash
 
+  Simple query: SELECT 1
 
-|   Simple query: SELECT 1   Expected: Returns result ✅ |
-| :---- |
+  Expected: Returns result ✅
+
+```
 
 If ALL pass → Deploy to QA environment
 If ANY fail → Roll back immediately\!
