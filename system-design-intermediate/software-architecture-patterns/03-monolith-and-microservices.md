@@ -2,7 +2,7 @@
 slug: monoliths-microservices
 title: Monoliths to Microservices
 readTime: 10 min
-orderIndex: 2
+orderIndex: 3
 premium: false
 ---
 ## **🏢 Monolith vs Microservices: The Building Story**
