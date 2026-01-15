@@ -86,7 +86,7 @@ Think of events as nodes in a graph.
 - If there is a path from e1 to e2, then e1 happened-before e2.
 - If there is no path either way, they are concurrent.
 
-[IMAGE: Three timelines (processes P1, P2, P3). Show events as dots and message arrows. Highlight a happened-before chain (path) and a pair of concurrent events with no path between them. Label the concurrent pair explicitly.]
+![img1](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459003/157_vlkbtn.png)
 
 Key insight:
 
@@ -193,9 +193,10 @@ Lamport timestamp is like a "take-a-number" dispenser at each counter, with a ru
 
 This preserves a causality-respecting order, but it also introduces false order between concurrent events.
 
-[IMAGE: Two parallel timelines P1 and P2. Show concurrent events e1 and f1 (no message path). Lamport assigns L(e1)=5, L(f1)=6, creating an artificial order. Label "false order".]
+![img2](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459003/158_tgeb5u.png)
 
 ### Algorithm
+
 Each process i maintains an integer clock Li.
 
 Rules:
@@ -588,7 +589,8 @@ Fix options:
 - Persist logical clock state to stable storage.
 - Or include an epoch/boot ID in the identity and treat (nodeId, epoch) as a new participant.
 
-[IMAGE: Restart with epoch: node i becomes (i, epoch++). Timestamps include epoch to prevent ambiguity. Show old epoch frozen and new epoch starting at 0.]
+![img3](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459003/159_zzn7hv.png)
+
 
 Key insight:
 
@@ -780,7 +782,7 @@ You can also compress or approximate, but with trade-offs.
    - Combine physical time with logical counters to get near-real-time ordering plus causality hints.
    - Not a replacement for vectors when you need exact concurrency detection.
 
-[IMAGE: Show evolution from vector clock per-node -> per-shard (RF=3) -> per-datacenter (3 regions). Annotate metadata size drop and what concurrency you can still detect.]
+  ![img4](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459004/160_t1qdxv.png)
 
 [MISCONCEPTION]
 
@@ -921,7 +923,10 @@ If the write does not carry causal context (vector), the system can lose causal 
 
 Fix: clients must propagate causal metadata (session guarantees).
 
-[IMAGE: Client reads from replica R1 (gets vector), then writes to R2 including vector, enabling causal propagation. Label the vector as "causal context".]
+![img5](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459653/lampat_edkaoz.png)
+
+
+
 
 [MISCONCEPTION]
 
@@ -1080,4 +1085,4 @@ Consistency model clarity:
 - Cost: O(N) metadata, membership complexity
 - Great for: detecting concurrent versions, causal consistency
 
-[IMAGE: Summary infographic comparing Lamport vs Vector clocks with pros/cons and typical use cases. Include: metadata size, concurrency detection, need for consensus, and typical deployment patterns (per-shard, per-region).]
+![img6](https://res.cloudinary.com/dretwg3dy/image/upload/v1768459004/161_tecgsq.png)
